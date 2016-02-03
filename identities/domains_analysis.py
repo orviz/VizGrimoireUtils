@@ -89,7 +89,7 @@ def connect(cfg):
    db = cfg.db_database
 
    try:
-      db = MySQLdb.connect(user = user, passwd = password, db = db)
+      db = MySQLdb.connect(user = user, passwd = password, db = db, host = host)
       return db, db.cursor()
    except:
       logging.error("Database connection error")
